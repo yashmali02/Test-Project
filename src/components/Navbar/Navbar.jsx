@@ -1,13 +1,20 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ searchQuery, setSearchQuery }) => {
   return (
     <div className={styles.main_Nav}>
       <div className={styles.nav_logo}>test website logo</div>
+
       <div className={styles.nav_search}>
-        <input placeholder="Enter a movie name" />
+        <input
+          type="text"
+          placeholder="Enter a movie name"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
       </div>
+
       <div className={styles.nav_right}>
         <nav>
           <ul>

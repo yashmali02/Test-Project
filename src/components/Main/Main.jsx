@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Main.module.css";
 import Card from "../Card/Card";
 
-const Main = () => {
+const Main = ({ searchQuery }) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,6 +30,10 @@ const Main = () => {
     fetchMovies();
   }, []);
 
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   if (loading) {
     return <div className={styles.main_page}>Loading...</div>;
   }
@@ -40,7 +44,7 @@ const Main = () => {
 
   return (
     <div className={styles.main_page}>
-      <Card movies={movies} />
+      <Card movies={filteredMovies} />
     </div>
   );
 };
