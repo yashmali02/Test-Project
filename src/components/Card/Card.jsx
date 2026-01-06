@@ -18,7 +18,9 @@ const Card = ({ movies }) => {
               <p>{movie.genre}</p>
               <p>{movie.rating}</p>
             </div>
-            <button className={styles.watch_btn}>Watch Now</button>
+            <button type="button" className={styles.watch_btn}>
+              Watch Now
+            </button>
           </div>
         </div>
       ))}

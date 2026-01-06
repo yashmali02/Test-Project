@@ -44,7 +44,11 @@ const Main = ({ searchQuery }) => {
 
   return (
     <div className={styles.main_page}>
-      <Card movies={filteredMovies} />
+      {filteredMovies.length === 0 ? (
+        <p>No movies found</p>
+      ) : (
+        <Card movies={filteredMovies} />
+      )}
     </div>
   );
 };

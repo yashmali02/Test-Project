@@ -8,6 +8,7 @@
     border-radius: 10px;
     width: 300px;
     gap: 10px;
+    min-height: 400px;
 }
 
 .main_card img {
