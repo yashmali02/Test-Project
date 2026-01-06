@@ -1,0 +1,42 @@
+.main_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+    min-width: 300px;
+    gap: 10px;
+}
+
+.main_card img {
+    border-radius: 10px;
+    width: 220px;
+}
+
+.year_rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.watch_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    outline: none;
+    border: 1px solid white;
+    height: 30px;
+    border-radius: 7px;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.watch_btn:hover {
+    background: white;
+    color: black;
+}
