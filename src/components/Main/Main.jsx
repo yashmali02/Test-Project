@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import styles from "./Main.module.css";
 import Card from "../Card/Card";
 
@@ -15,7 +15,7 @@ const Main = ({ searchQuery }) => {
         );
 
         if (!response.ok) {
-          throw new Error("'Failed to load movies");
+          throw new Error("Failed to load movies");
         }
 
         const data = await response.json();
@@ -30,9 +30,13 @@ const Main = ({ searchQuery }) => {
     fetchMovies();
   }, []);
 
-  const filteredMovies = movies.filter((movie) =>
-    movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredMovies = useMemo(() => {
+    if (!searchQuery) return movies;
+
+    return movies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [movies, searchQuery]);
 
   if (loading) {
     return <div className={styles.main_page}>Loading Movies...</div>;
