@@ -15,7 +15,7 @@ const Main = ({ searchQuery }) => {
         );
 
         if (!response.ok) {
-          throw new Error("Failed to fetch movies");
+          throw new Error("'Failed to load movies");
         }
 
         const data = await response.json();
@@ -35,7 +35,7 @@ const Main = ({ searchQuery }) => {
   );
 
   if (loading) {
-    return <div className={styles.main_page}>Loading...</div>;
+    return <div className={styles.main_page}>Loading Movies...</div>;
   }
 
   if (error) {
@@ -48,7 +48,11 @@ const Main = ({ searchQuery }) => {
         Showing {filteredMovies.length} of {movies.length} movies
       </div>
 
-      <Card movies={filteredMovies} />
+      {filteredMovies.length === 0 ? (
+        <p>No movies found</p>
+      ) : (
+        <Card movies={filteredMovies} />
+      )}
     </div>
   );
 };
