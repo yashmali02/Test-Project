@@ -5,3 +5,11 @@
     padding: 20px;
     justify-items: center;
 }
+
+.result_info {
+    grid-column: 1 / -1;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    width: 100%;
+}
