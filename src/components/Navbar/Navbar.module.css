@@ -1,0 +1,63 @@
+.main_Nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.nav_logo {
+    font-size: 20px;
+}
+
+.nav_search {
+    display: flex;
+    align-items: center;
+}
+
+.nav_search input {
+    width: 800px;
+    height: 40px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.nav_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav_right nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav_right nav ul li {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.nav_right nav ul li:hover {
+    color: rgb(189, 189, 189);
+}
+
+.nav_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 20px;
+    outline: none;
+    background: black;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
