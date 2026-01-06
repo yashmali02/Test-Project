@@ -7,7 +7,6 @@
     padding: 5px;
     border-radius: 10px;
     width: 300px;
-    min-width: 300px;
     gap: 10px;
 }
 
@@ -39,4 +38,12 @@
 .watch_btn:hover {
     background: white;
     color: black;
+}
+
+.year_rating_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
 }
