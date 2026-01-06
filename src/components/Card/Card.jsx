@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Card.module.css";
 
 const Card = ({ movies }) => {
-  console.log(movies[0]);
   return (
     <>
       {movies.map((movie, idx) => (
